@@ -13,7 +13,7 @@ public class AlertsPage {
     public String confirmAlertLabel = "#confirm-label";
 
     public String simpleAlertLabelText = "OK button pressed";
-    public String confirmAlertLabelText = "You pressed OK!";
+    public String confirmAlertLabelTextOK = "You pressed OK!";
     public String confirmAlertLabelTextCancel = "You pressed Cancel!";
     public String promptTestText = "Lord Vader";
     public String promptAlertLabelText = "Hello " + promptTestText + "! How are you today?";

@@ -40,7 +40,7 @@ public class AlertsTest extends BaseTest {
     public void confirmAlertTest() {
         alertButtonClick(alertsPage.confirmAlertBtn);
         acceptAlert();
-        confirmLabelText(alertsPage.confirmAlertLabel, alertsPage.confirmAlertLabelText);
+        confirmLabelText(alertsPage.confirmAlertLabel, alertsPage.confirmAlertLabelTextOK);
         alertButtonClick(alertsPage.confirmAlertBtn);
         dismissAlert();
         confirmLabelText(alertsPage.confirmAlertLabel, alertsPage.confirmAlertLabelTextCancel);
