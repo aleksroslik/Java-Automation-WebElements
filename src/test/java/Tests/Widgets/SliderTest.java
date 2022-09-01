@@ -36,18 +36,18 @@ public class SliderTest extends BaseTest {
     @DisplayName("Slider test - Slider moves left and right")
     public void sliderTestLeftAndRightMove() {
         driver.get(sliderPage.sliderPageUrl);
-        slideToLocation(SliderPage.sliderHandle, 540, 215, "50");
-        slideToLocation(SliderPage.sliderHandle, 320, 185, "80");
-        slideToLocation(SliderPage.sliderHandle, -680, -20, "20");
-        slideToLocation(SliderPage.sliderHandle, -350, -10, "0");
+        slideToLocation(sliderPage.sliderHandle, 540, 215, "50");
+        slideToLocation(sliderPage.sliderHandle, 320, 185, "80");
+        slideToLocation(sliderPage.sliderHandle, -680, -20, "20");
+        slideToLocation(sliderPage.sliderHandle, -350, -10, "0");
     }
 
     public static Stream<Arguments> data() {
         return Stream.of(
-                Arguments.of(SliderPage.sliderHandle, 540, 215, "50"),
-                Arguments.of(SliderPage.sliderHandle, 870, 215, "80"),
-                Arguments.of(SliderPage.sliderHandle, 210, 215, "20"),
-                Arguments.of(SliderPage.sliderHandle, -10, 215, "0")
+                Arguments.of(sliderPage.sliderHandle, 540, 215, "50"),
+                Arguments.of(sliderPage.sliderHandle, 870, 215, "80"),
+                Arguments.of(sliderPage.sliderHandle, 210, 215, "20"),
+                Arguments.of(sliderPage.sliderHandle, -10, 215, "0")
         );
     }
 
