@@ -6,6 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -44,6 +47,16 @@ public class AlertsTest extends BaseTest {
         alertButtonClick(alertsPage.confirmAlertBtn);
         dismissAlert();
         confirmLabelText(alertsPage.confirmAlertLabel, alertsPage.confirmAlertLabelTextCancel);
+    }
+
+    @Test
+    @DisplayName("Delayed Alert test")
+    public void delayedAlertTest() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        alertButtonClick(alertsPage.delayedAlertBtn);
+        wait.until(ExpectedConditions.alertIsPresent());
+        acceptAlert();
+        confirmLabelText(alertsPage.delayedAlertLabel, alertsPage.delayedAlertLabelText);
     }
 
     public void acceptAlert() {
