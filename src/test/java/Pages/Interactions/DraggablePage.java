@@ -1,6 +1,6 @@
 package Pages.Interactions;
 
-public class InteractionsPage {
+public class DraggablePage {
 
     public String interactionsPageUrl = "https://seleniumui.moderntester.pl/draggable.php";
     public String dragAndDropBox = "#draggable";
