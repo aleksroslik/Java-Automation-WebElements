@@ -2,7 +2,6 @@ package Tests.Widgets;
 
 import Pages.Widgets.SliderPage;
 import Tests.BaseTest;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -19,15 +18,11 @@ public class SliderTest extends BaseTest {
 
     static SliderPage sliderPage = new SliderPage();
 
-    @BeforeEach
-    public void goToPageUrl() {
-        driver.get(sliderPage.sliderPageUrl);
-    }
-
     @ParameterizedTest
     @MethodSource("data")
     @DisplayName("Slider test - Slider resets each time")
     public void sliderTestMoveWithReset(String sliderHandle, int x, String expectedValue) {
+        driver.get(sliderPage.sliderPageUrl);
         slideToLocation(sliderHandle, x, expectedValue);
     }
 
