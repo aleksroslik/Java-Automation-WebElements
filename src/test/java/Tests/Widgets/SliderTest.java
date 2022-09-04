@@ -4,13 +4,10 @@ import Pages.Widgets.SliderPage;
 import Tests.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-
-import java.util.stream.Stream;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
@@ -19,20 +16,11 @@ public class SliderTest extends BaseTest {
     static SliderPage sliderPage = new SliderPage();
 
     @ParameterizedTest
-    @MethodSource("data")
+    @MethodSource("Pages.Widgets.SliderPage#data")
     @DisplayName("Slider test - Slider resets each time")
     public void sliderTestMoveWithReset(String sliderHandle, int x, String expectedValue) {
         driver.get(sliderPage.sliderPageUrl);
         slideToLocation(sliderHandle, x, expectedValue);
-    }
-
-    public static Stream<Arguments> data() {
-        return Stream.of(
-                Arguments.of(sliderPage.sliderHandle, 50, "50"),
-                Arguments.of(sliderPage.sliderHandle, 80, "80"),
-                Arguments.of(sliderPage.sliderHandle, 20, "20"),
-                Arguments.of(sliderPage.sliderHandle, 0, "0")
-        );
     }
 
     public void slideToLocation(String sliderHandle, int xTimes, String expectedValue) {
