@@ -6,4 +6,5 @@ public class AutocompletePage {
 
     public String searchInput = "#search";
     public String resultList = "#ui-id-1";
+    public String expectedText = "antal";
 }
