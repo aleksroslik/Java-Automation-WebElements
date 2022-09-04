@@ -2,13 +2,11 @@ package Tests.Basic;
 
 import Pages.Basic.WindowsTabsPage;
 import Tests.BaseTest;
-import Tests.TableTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public class WindowsTabsTest extends BaseTest {
 

@@ -1,4 +1,4 @@
-package Pages;
+package Pages.Basic;
 
 import org.openqa.selenium.WebElement;
 

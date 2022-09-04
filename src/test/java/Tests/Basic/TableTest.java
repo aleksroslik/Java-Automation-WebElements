@@ -1,6 +1,7 @@
-package Tests;
+package Tests.Basic;
 
-import Pages.TablePage;
+import Pages.Basic.TablePage;
+import Tests.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
