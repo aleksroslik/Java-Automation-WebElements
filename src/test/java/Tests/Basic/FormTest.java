@@ -9,14 +9,13 @@ import java.io.File;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-
 public class FormTest extends BaseTest {
 
     File file = new File("src/main/resources/testFile.txt");
 
 
     @Test
-    @DisplayName("Fill-in Form Success test")
+    @DisplayName("Form Success test")
     public void formTestSuccess() {
         FormPage formPage = new FormPage(driver);
         driver.get(formPage.formPageUrl);
