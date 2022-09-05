@@ -43,5 +43,4 @@ public class SliderTest extends BaseTest {
                 Arguments.of(SliderPage.sliderHandle, 0, "0")
         );
     }
-
 }
