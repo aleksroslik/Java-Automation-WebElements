@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public abstract class BaseTest {
+public class BaseTest {
 
     public static WebDriver driver;
 
