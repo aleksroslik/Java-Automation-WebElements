@@ -13,7 +13,7 @@ public class SelectMenuPage {
     public String numberBtn = "#number-button";
     public String titleBtn = "#salutation-button";
 
-    public String filesMenu = "#files-menu";
+    public String filesMenuItems = "ul#files-menu li";
     public String numberMenu = "#number-menu";
     public String speedMenu = "#speed-menu";
     public String titleMenu = "#salutation-menu";
