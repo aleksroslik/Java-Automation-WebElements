@@ -13,7 +13,6 @@ public class FormTest extends BaseTest {
 
     File file = new File("src/main/resources/testFile.txt");
 
-
     @Test
     @DisplayName("Form Success test")
     public void formTestSuccess() {
