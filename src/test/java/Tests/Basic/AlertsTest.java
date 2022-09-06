@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class AlertsTest extends BaseTest {
@@ -51,7 +53,7 @@ public class AlertsTest extends BaseTest {
     @Test
     @DisplayName("Delayed Alert test")
     public void delayedAlertTest() {
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         alertButtonClick(alertsPage.delayedAlertBtn);
         wait.until(ExpectedConditions.alertIsPresent());
         acceptAlert();
