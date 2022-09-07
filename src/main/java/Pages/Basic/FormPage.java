@@ -59,33 +59,39 @@ public class FormPage {
     @FindBy(name = "gridRadiosExperience")
     private List<WebElement> yearsOfExperience;
 
-    public void sendKeysName(String name) {
+    public FormPage sendKeysName(String name) {
         firstName.sendKeys(name);
-
+        return this;
     }
 
-    public void sendKeysSurname(String surname) {
+    public FormPage sendKeysSurname(String surname) {
         lastName.sendKeys(surname);
+        return this;
     }
 
-    public void sendKeysEmail(String emailAddress) {
+    public FormPage sendKeysEmail(String emailAddress) {
         emailInput.sendKeys(emailAddress);
+        return this;
     }
 
-    public void addAge(String age) {
+    public FormPage addAge(String age) {
         ageInput.sendKeys(age);
+        return this;
     }
 
-    public void randomExperience() {
+    public FormPage randomExperience() {
         getRandomElement(yearsOfExperience).click();
+        return this;
     }
 
-    public void getRandomProfession() {
+    public FormPage getRandomProfession() {
         getRandomElement(professions).click();
+        return this;
     }
 
-    public void getRandomGender() {
+    public FormPage getRandomGender() {
         getRandomElement(gender).click();
+        return this;
     }
 
     private WebElement getRandomElement(List<WebElement> elements) {
@@ -95,24 +101,29 @@ public class FormPage {
         return elements.get(randomPick);
     }
 
-    public void selectOptionContinents(String value) {
+    public FormPage selectOptionContinents(String value) {
         new Select(dropDownList).selectByVisibleText(value);
+        return this;
     }
 
-    public void selectCommand(String value) {
+    public FormPage selectCommand(String value) {
         new Select(commandsSelection).selectByVisibleText(value);
+        return this;
     }
 
-    public void uploadFile(String filePath) {
+    public FormPage uploadFile(String filePath) {
         fileToUpload.sendKeys(filePath);
+        return this;
     }
 
-    public void additionalInfoInput (String info) {
+    public FormPage additionalInfoInput (String info) {
         additionalInfo.sendKeys(info);
+        return this;
     }
 
-    public void clickDownloadBtn() {
+    public FormPage clickDownloadBtn() {
         testFileToDownloadBtn.click();
+        return this;
     }
 
     public void clickSubmitBtn() {

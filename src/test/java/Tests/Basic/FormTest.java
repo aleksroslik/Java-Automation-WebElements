@@ -18,21 +18,19 @@ public class FormTest extends BaseTest {
     public void formTestSuccess() {
         FormPage formPage = new FormPage(driver);
         driver.get(formPage.formPageUrl);
-        formPage.sendKeysName("Janina");
-        formPage.sendKeysSurname("Kowalska");
-        formPage.sendKeysEmail("email@email.com");
-        formPage.getRandomGender();
-        formPage.addAge("20");
-        formPage.randomExperience();
-        formPage.getRandomProfession();
-        formPage.selectOptionContinents("Europe");
-        formPage.selectCommand("Wait Commands");
-        formPage.uploadFile(file.getAbsolutePath());
-        formPage.additionalInfoInput("test");
-        formPage.clickDownloadBtn();
-        formPage.clickSubmitBtn();
-        String actualText = formPage.getSuccessText();
-        String expectedText = "Form send with success";
-        assertThat(actualText).isEqualTo(expectedText);
+        formPage.sendKeysName("Janina")
+                .sendKeysSurname("Kowalska")
+                .sendKeysEmail("email@email.com")
+                .getRandomGender()
+                .addAge("20")
+                .randomExperience()
+                .getRandomProfession()
+                .selectOptionContinents("Europe")
+                .selectCommand("Wait Commands")
+                .uploadFile(file.getAbsolutePath())
+                .additionalInfoInput("test")
+                .clickDownloadBtn()
+                .clickSubmitBtn();
+        assertThat(formPage.getSuccessText()).isEqualTo("Form send with success");
     }
 }
