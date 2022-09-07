@@ -1,5 +1,6 @@
 package Tests.Basic;
 
+import Pages.Basic.TablePage;
 import Pages.Basic.WindowsTabsPage;
 import Tests.BaseTest;
 import org.junit.jupiter.api.DisplayName;
@@ -11,16 +12,16 @@ import java.util.ArrayList;
 public class WindowsTabsTest extends BaseTest {
 
     WindowsTabsPage windowsTabsPage = new WindowsTabsPage();
-    TableTest tableTest = new TableTest();
 
     @Test
     @DisplayName("Switching between new windows and tabs")
-    public void switchTest(){
+    public void switchTest() {
+        TablePage tablePage = new TablePage(driver);
         driver.get(windowsTabsPage.tabsPageUrl);
         windowsTabsPage.mainWindowHandle = driver.getWindowHandle();
         btnClick(windowsTabsPage.newBrowserWindow);
         switchWindows();
-        tableTest.searchForData();
+        tablePage.getData("Switzerland", 4000);
         switchWindowsBack();
         btnClick(windowsTabsPage.newMsgWindow);
         switchWindows();
@@ -29,7 +30,7 @@ public class WindowsTabsTest extends BaseTest {
         switchWindowsBack();
         btnClick(windowsTabsPage.newBrowserTab);
         switchTabs();
-        tableTest.searchForData();
+        tablePage.getData("Switzerland", 4000);
         switchBackTabs();
     }
 

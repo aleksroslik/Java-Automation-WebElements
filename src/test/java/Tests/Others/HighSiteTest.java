@@ -35,6 +35,6 @@ public class HighSiteTest extends BaseTest {
 
     public void takeScreenshot() throws IOException {
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshotFile, new File(".//screenshot/screen.png"));
+        FileUtils.copyFile(screenshotFile, new File(".//src/main/resources/screenshot/screen.png"));
     }
 }

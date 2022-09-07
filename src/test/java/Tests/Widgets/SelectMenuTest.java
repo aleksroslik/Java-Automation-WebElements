@@ -57,16 +57,16 @@ public class SelectMenuTest extends BaseTest {
     }
 
     public void selectItemByText(String itemsList, String text) {
-        String innerHtml = null;
+        String textValue = null;
         selectMenuPage.files = driver.findElements(By.cssSelector(itemsList));
         for(int i=0; i<selectMenuPage.files.size(); i++) {
             WebElement myElement = selectMenuPage.files.get(i);
-            innerHtml = myElement.getText();
-            if(innerHtml.contentEquals(text)) {
+            textValue = myElement.getText();
+            if(textValue.contentEquals(text)) {
                 myElement.click();
                 break;
             }
         }
-        System.out.println("Selected value " + innerHtml);
+        System.out.println("Selected value " + textValue);
     }
 }

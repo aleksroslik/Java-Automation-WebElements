@@ -20,6 +20,5 @@ public class SelectMenuPage {
 
     public List<WebElement> speed;
     public List<WebElement> files;
-    public List<WebElement> numbers;
     public List<WebElement> titles;
 }
