@@ -16,8 +16,8 @@ public class SortableTest extends BaseTest {
     SortablePage sortablePage = new SortablePage();
 
     @Test
-    @DisplayName("Sortable test 2")
-    public void sortableTest2() throws InterruptedException {
+    @DisplayName("Sortable test")
+    public void sortableTest() throws InterruptedException {
         driver.get(sortablePage.sortablePageUrl);
 
         int items = driver.findElements(By.xpath(sortablePage.item)).size();
