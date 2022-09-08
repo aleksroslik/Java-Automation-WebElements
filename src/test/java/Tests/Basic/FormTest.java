@@ -26,7 +26,7 @@ public class FormTest extends BaseTest {
                 .randomExperience()
                 .getRandomProfession()
                 .selectOptionContinents("Europe")
-                .selectCommand("Wait Commands")
+                .selectCommands("Wait Commands", "Switch Commands", driver)
                 .uploadFile(file.getAbsolutePath())
                 .additionalInfoInput("test")
                 .clickDownloadBtn()
