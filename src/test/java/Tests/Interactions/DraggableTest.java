@@ -28,5 +28,4 @@ public class DraggableTest extends BaseTest {
         action.dragAndDropBy(box, -x1, -y1).perform();
         action.dragAndDropBy(box, -x1, y1).perform();
     }
-
 }

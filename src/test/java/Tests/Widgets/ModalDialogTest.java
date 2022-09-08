@@ -34,13 +34,13 @@ public class ModalDialogTest extends BaseTest {
         assertThat(finalCount).isEqualTo(initCount + 1);
     }
 
-    public void sendKeys(String locator, String keys) {
+    private void sendKeys(String locator, String keys) {
         WebElement modalContainer = driver.findElement(By.cssSelector(modalDialogPage.modal));
         modalContainer.findElement(By.cssSelector(locator)).clear();
         modalContainer.findElement(By.cssSelector(locator)).sendKeys(keys);
     }
 
-    public static Stream<Arguments> data() {
+    private static Stream<Arguments> data() {
         return Stream.of(
                 Arguments.of("Jan Kowalski", "Email@email.com", "password")
         );

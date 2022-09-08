@@ -21,7 +21,7 @@ public class TooltipTest extends BaseTest {
         toolTipMsgTrigger(tooltipPage.ageInput, tooltipPage.toolTipBox);
     }
 
-    public void toolTipMsgTrigger(String input, String box) {
+    private void toolTipMsgTrigger(String input, String box) {
         Actions action = new Actions(driver);
         WebElement tooltip = driver.findElement(By.cssSelector(input));
         action.moveToElement(tooltip).perform();

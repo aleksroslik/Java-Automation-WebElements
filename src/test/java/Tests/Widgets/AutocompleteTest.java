@@ -25,7 +25,7 @@ public class AutocompleteTest extends BaseTest {
         getValueAndCompareText(autocompletePage.searchInput, autocompletePage.expectedText);
     }
 
-    public void selectOption(String input, int xTimes) {
+    private void selectOption(String input, int xTimes) {
         WebElement resultList = driver.findElement(By.cssSelector(input));
         for (int i=0; i<xTimes; i++) {
             resultList.sendKeys(Keys.ARROW_DOWN);
@@ -33,11 +33,11 @@ public class AutocompleteTest extends BaseTest {
         resultList.sendKeys(Keys.TAB);
     }
 
-    public void sendKeys(String input, String value) {
+    private void sendKeys(String input, String value) {
         driver.findElement(By.cssSelector(input)).sendKeys(value);
     }
 
-    public void getValueAndCompareText(String input, String expVal){
+    private void getValueAndCompareText(String input, String expVal){
         String actualValue = driver.findElement(By.cssSelector(input)).getAttribute("value");
         assertThat(actualValue).isEqualTo(expVal);
     }

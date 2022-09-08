@@ -28,27 +28,27 @@ public class SelectMenuTest extends BaseTest {
         getRandomTitle();
     }
 
-    public void btnClick(String btn) {
+    private void btnClick(String btn) {
         driver.findElement(By.cssSelector(btn)).click();
     }
 
-    public void getRandomSpeed() {
+    private void getRandomSpeed() {
         selectMenuPage.speed = driver.findElements(By.cssSelector(selectMenuPage.speedMenu));
         getRandomElement(selectMenuPage.speed).click();
     }
 
-    public void getRandomTitle() {
+    private void getRandomTitle() {
         selectMenuPage.titles = driver.findElements(By.cssSelector(selectMenuPage.titleMenu));
         getRandomElement(selectMenuPage.titles).click();
     }
 
-    public WebElement getRandomElement(List<WebElement> list)
+    private WebElement getRandomElement(List<WebElement> list)
     {
         Random rand = new Random();
         return list.get(rand.nextInt(list.size()));
     }
 
-    public void selectOptionByIndex(String input, int xTimes) {
+    private void selectOptionByIndex(String input, int xTimes) {
         WebElement numberList = driver.findElement(By.cssSelector(input));
         for (int i=0; i<xTimes; i++) {
             numberList.sendKeys(Keys.ARROW_DOWN);
@@ -56,7 +56,7 @@ public class SelectMenuTest extends BaseTest {
         numberList.sendKeys(Keys.ENTER);
     }
 
-    public void selectItemByText(String itemsList, String text) {
+    private void selectItemByText(String itemsList, String text) {
         String textValue = null;
         selectMenuPage.files = driver.findElements(By.cssSelector(itemsList));
         for(int i=0; i<selectMenuPage.files.size(); i++) {

@@ -21,7 +21,7 @@ public class DroppableTest extends BaseTest {
         dragToLocation(droppablePage.dragBox, droppablePage.dropBox, droppablePage.successMessage);
     }
 
-    public void dragToLocation(String startLocation, String targetLocation, String expectedValue) {
+    private void dragToLocation(String startLocation, String targetLocation, String expectedValue) {
         Actions action = new Actions(driver);
         WebElement dragBox = driver.findElement(By.cssSelector(startLocation));
         WebElement dropBox = driver.findElement(By.cssSelector(targetLocation));

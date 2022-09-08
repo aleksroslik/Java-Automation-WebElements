@@ -13,5 +13,4 @@ public class IFramePage {
     public String passwordInput = "#inputPassword";
     public String continentsDropDown = "#inlineFormCustomSelectPref";
     public String radioBtn3 = "#gridRadios3";
-
 }

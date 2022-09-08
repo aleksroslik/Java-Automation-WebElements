@@ -60,23 +60,23 @@ public class AlertsTest extends BaseTest {
         confirmLabelText(alertsPage.delayedAlertLabel, alertsPage.delayedAlertLabelText);
     }
 
-    public void acceptAlert() {
+    private void acceptAlert() {
         driver.switchTo().alert().accept();
     }
 
-    public void dismissAlert() {
+    private void dismissAlert() {
         driver.switchTo().alert().dismiss();
     }
 
-    public void sendKeysAlert(String testText) {
+    private void sendKeysAlert(String testText) {
         driver.switchTo().alert().sendKeys(testText);
     }
 
-    public void alertButtonClick(String alertButton) {
+    private void alertButtonClick(String alertButton) {
         driver.findElement(By.cssSelector(alertButton)).click();
     }
 
-    public void confirmLabelText(String label, String expectedText) {
+    private void confirmLabelText(String label, String expectedText) {
         String actualText = driver.findElement(By.cssSelector(label)).getText();
         assertThat(actualText).isEqualTo(expectedText);
     }

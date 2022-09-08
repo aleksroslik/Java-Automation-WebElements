@@ -26,17 +26,17 @@ public class SelectableTest extends BaseTest {
         assertText(selectablePage.feedbackMsg, selectablePage.expectedText);
     }
 
-    public void selectOption(String option) {
+    private void selectOption(String option) {
         driver.findElement(By.cssSelector(option)).click();
     }
 
-    public void keyDownWithControl(String area) {
+    private void keyDownWithControl(String area) {
         WebElement options = driver.findElement(By.cssSelector(area));
         Actions action = new Actions(driver);
         action.keyDown(options, Keys.CONTROL).perform();
     }
 
-    public void assertText(String actualMessage, String expectedText) {
+    private void assertText(String actualMessage, String expectedText) {
         String actualMsg = driver.findElement(By.cssSelector(actualMessage)).getText();
         assertThat(actualMsg).isEqualTo(expectedText);
     }

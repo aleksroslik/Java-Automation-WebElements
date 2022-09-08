@@ -21,7 +21,7 @@ public class ResizableTest extends BaseTest {
         changeBoxSize(resizablePage.grip, 10, 10);
     }
 
-    public void changeBoxSize(String gripHandle, int x, int y) {
+    private void changeBoxSize(String gripHandle, int x, int y) {
         Actions action = new Actions(driver);
         WebElement grip = driver.findElement(By.cssSelector(gripHandle));
         action.clickAndHold(grip).moveByOffset(x, y).release().build().perform();

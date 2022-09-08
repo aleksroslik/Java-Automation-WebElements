@@ -22,13 +22,13 @@ public class AccordionTest extends BaseTest {
                 (accordionPage.section4, accordionPage.section4Par1, accordionPage.section4Par2);
     }
 
-    public void openSectionAndGetText(String section, String text) {
+    private void openSectionAndGetText(String section, String text) {
         driver.findElement(By.cssSelector(section)).click();
         String expectedText = driver.findElement(By.cssSelector(text)).getText();
         System.out.println(expectedText + "\n");
     }
 
-    public void openSectionWithMultipleElementsAndGetText(String section, String element1, String element2)
+    private void openSectionWithMultipleElementsAndGetText(String section, String element1, String element2)
             throws InterruptedException{
         driver.findElement(By.cssSelector(section)).click();
         String item1 = driver.findElement(By.xpath(element1)).getText();

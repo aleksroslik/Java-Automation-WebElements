@@ -1,7 +1,5 @@
 package Pages.Interactions;
 
-import org.openqa.selenium.WebDriver;
-
 public class SelectablePage {
     
     public String selectablePageUrl = "https://seleniumui.moderntester.pl/selectable.php";

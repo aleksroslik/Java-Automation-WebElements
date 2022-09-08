@@ -23,7 +23,7 @@ public class DatePickerTest extends BaseTest {
         driver.get(datePickerPage.datePickerUrl);
         dateInputClick();
         dateInputSendKeys(String.valueOf(Keys.ENTER));
-        verifyDate("09/05/2022");
+        verifyDate("09/08/2022");
         dateInputClear();
         dateInputClick();
         selectNextMonth();
@@ -47,37 +47,37 @@ public class DatePickerTest extends BaseTest {
         selectRandomDate();
     }
 
-    public void dateInputClick() throws InterruptedException {
+    private void dateInputClick() throws InterruptedException {
         driver.findElement(By.cssSelector(datePickerPage.dateInputBox)).click();
         Thread.sleep(2000);
     }
 
-    public void dateInputClear() {
+    private void dateInputClear() {
         driver.findElement(By.cssSelector(datePickerPage.dateInputBox)).clear();
     }
 
-    public void dateInputSendKeys(String value) {
+    private void dateInputSendKeys(String value) {
         driver.findElement(By.cssSelector(datePickerPage.dateInputBox)).sendKeys(value);
     }
 
-    public void verifyDate(String date) {
+    private void verifyDate(String date) {
         String actualDate = driver.findElement(By.cssSelector(datePickerPage.dateInputBox)).getAttribute("value");
         assertThat(actualDate).isEqualTo(date);
     }
 
-    public void selectNextMonth() {
+    private void selectNextMonth() {
         driver.findElement(By.cssSelector(datePickerPage.monthNext)).click();
     }
 
-    public void selectPreviousMonth() {
+    private void selectPreviousMonth() {
         driver.findElement(By.cssSelector(datePickerPage.monthPrevious)).click();
     }
 
-    public void pickDay(String day) {
+    private void pickDay(String day) {
         driver.findElement(By.xpath(day)).click();
     }
 
-    public void clickNextMonthInLoop(String selectedMonth) {
+    private void clickNextMonthInLoop(String selectedMonth) {
         while (true) {
             String monthPick = driver.findElement(By.cssSelector(datePickerPage.datePicker_month)).getText();
             if (monthPick.equals(selectedMonth)) {
@@ -88,10 +88,10 @@ public class DatePickerTest extends BaseTest {
         }
     }
 
-    public void clickPreviousMonthInLoop(String selectedYear) {
+    private void clickPreviousMonthInLoop(String selectedYear) {
         while (true) {
-            String monthPick = driver.findElement(By.cssSelector(datePickerPage.datePicker_year)).getText();
-            if (monthPick.equals(selectedYear)) {
+            String pick = driver.findElement(By.cssSelector(datePickerPage.datePicker_year)).getText();
+            if (pick.equals(selectedYear)) {
                 break;
             } else {
                 driver.findElement(By.cssSelector(datePickerPage.monthPrevious)).click();
@@ -99,7 +99,7 @@ public class DatePickerTest extends BaseTest {
         }
     }
 
-    public void selectRandomDate() {
+    private void selectRandomDate() {
         datePickerPage.dateTable = driver.findElements(By.cssSelector(datePickerPage.dateList));
         getRandomElement(datePickerPage.dateTable).click();
         String chosenDate = driver.findElement(By.cssSelector(datePickerPage.dateInputBox)).getAttribute("value");

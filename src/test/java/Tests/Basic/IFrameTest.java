@@ -29,20 +29,20 @@ public class IFrameTest extends BaseTest {
         driver.findElement(By.cssSelector(iFramePage.navBtnBasic)).click();
     }
 
-    public void switchToIFrame(String iFrame) {
+    private void switchToIFrame(String iFrame) {
         driver.switchTo().frame(iFrame);
     }
 
-    public void switchToDefault() {
+    private void switchToDefault() {
         driver.switchTo().defaultContent();
     }
 
-    public void fillInForm1(String firstName, String lastName) {
+    private void fillInForm1(String firstName, String lastName) {
         driver.findElement(By.cssSelector(iFramePage.firstNameInput)).sendKeys(firstName);
         driver.findElement(By.cssSelector(iFramePage.lastNameInput)).sendKeys(lastName);
     }
 
-    public void fillInForm2(String login, String password, int index, String radioButton){
+    private void fillInForm2(String login, String password, int index, String radioButton){
         driver.findElement(By.cssSelector(iFramePage.loginInput)).sendKeys(login);
         driver.findElement(By.cssSelector(iFramePage.passwordInput)).sendKeys(password);
         driver.findElement(By.cssSelector(iFramePage.continentsDropDown)).click();

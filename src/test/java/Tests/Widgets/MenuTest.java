@@ -24,7 +24,7 @@ public class MenuTest extends BaseTest {
         findElementOnTheList(menuPage.modernItem);
     }
 
-    public void findElementOnTheList(String element) {
+    private void findElementOnTheList(String element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector(element))));
         driver.findElement(By.cssSelector(element)).click();

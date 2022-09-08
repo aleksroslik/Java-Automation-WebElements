@@ -34,28 +34,28 @@ public class WindowsTabsTest extends BaseTest {
         switchBackTabs();
     }
 
-    public void btnClick(String button) {
+    private void btnClick(String button) {
         driver.findElement(By.cssSelector(button)).click();
     }
 
-    public void switchWindows() {
+    private void switchWindows() {
         for(String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
     }
 
-    public void switchTabs() {
+    private void switchTabs() {
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
     }
 
-    public void switchBackTabs() {
+    private void switchBackTabs() {
         driver.close();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0));
     }
 
-    public void switchWindowsBack() {
+    private void switchWindowsBack() {
         driver.close();
         driver.switchTo().window(windowsTabsPage.mainWindowHandle);
     }

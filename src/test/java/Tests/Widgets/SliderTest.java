@@ -26,7 +26,7 @@ public class SliderTest extends BaseTest {
         slideToLocation(sliderHandle, x, expectedValue);
     }
 
-    public void slideToLocation(String sliderHandle, int xTimes, String expectedValue) {
+    private void slideToLocation(String sliderHandle, int xTimes, String expectedValue) {
         WebElement slider = driver.findElement(By.cssSelector(sliderHandle));
         for (int i=0; i<xTimes; i++) {
             slider.sendKeys(Keys.ARROW_RIGHT);
@@ -35,7 +35,7 @@ public class SliderTest extends BaseTest {
         String actualValue = driver.findElement(By.cssSelector(sliderHandle)).getText();
         assertThat(actualValue).isEqualTo(expectedValue);
     }
-    public static Stream<Arguments> data() {
+    private static Stream<Arguments> data() {
         return Stream.of(
                 Arguments.of(SliderPage.sliderHandle, 50, "50"),
                 Arguments.of(SliderPage.sliderHandle, 80, "80"),
