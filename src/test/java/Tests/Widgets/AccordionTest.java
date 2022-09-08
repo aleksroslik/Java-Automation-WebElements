@@ -32,7 +32,7 @@ public class AccordionTest extends BaseTest {
             throws InterruptedException{
         driver.findElement(By.cssSelector(section)).click();
         String item1 = driver.findElement(By.xpath(element1)).getText();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         String item2 = driver.findElement(By.xpath(element2)).getText();
         System.out.println(item1 + "\n" + item2 + "\n");
     }
