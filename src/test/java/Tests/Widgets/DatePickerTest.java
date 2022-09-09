@@ -114,9 +114,9 @@ public class DatePickerTest extends BaseTest {
         return elements.get(randomPick);
     }
 
-    private void selectDay(String dayToSelect, int index) {
+    private void selectDay(String dayToSelect, int monthIndex) {
         List<WebElement> allDays =
-                driver.findElements(By.cssSelector("td[data-month='"+index+"']"));
+                driver.findElements(By.cssSelector("td[data-month='"+monthIndex+"']"));
         for (WebElement day : allDays) {
             if (day.getText().equals(dayToSelect)) {
                 day.click();
