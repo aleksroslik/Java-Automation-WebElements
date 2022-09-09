@@ -14,9 +14,6 @@ public class DatePickerPage {
     public String datePicker_month = "span.ui-datepicker-month";
     public String datePicker_year = "span.ui-datepicker-year";
 
-    public String dateOct = "//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]";
-    public String dateJan = "//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[3]";
-
     public String dateList = "tbody tr td";
 
     public List<WebElement> dateTable;
