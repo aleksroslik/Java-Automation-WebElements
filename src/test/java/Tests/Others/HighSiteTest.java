@@ -1,7 +1,7 @@
 package Tests.Others;
 
 import Pages.Others.HighSitePage;
-import Tests.BaseTest;
+import Tests.Base.BaseTest;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

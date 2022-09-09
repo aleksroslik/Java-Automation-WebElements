@@ -1,7 +1,7 @@
 package Tests.Basic;
 
 import Pages.Basic.FormPage;
-import Tests.BaseTest;
+import Tests.Base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

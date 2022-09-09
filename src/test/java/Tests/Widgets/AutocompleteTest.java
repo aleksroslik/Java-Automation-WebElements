@@ -1,7 +1,7 @@
 package Tests.Widgets;
 
 import Pages.Widgets.AutocompletePage;
-import Tests.BaseTest;
+import Tests.Base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

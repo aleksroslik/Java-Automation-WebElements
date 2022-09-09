@@ -1,7 +1,7 @@
 package Tests.Widgets;
 
 import Pages.Widgets.SliderPage;
-import Tests.BaseTest;
+import Tests.Base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
