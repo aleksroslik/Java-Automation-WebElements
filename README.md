@@ -2,7 +2,7 @@
 
 Basic web elements
 Here you will find 8 tests to automate where you can learn the basics of Selenium. 
-All of them can be found at http://seleniumui.moderntester.plunder the Basicmenu1. 
+All of them can be found at http://seleniumui.moderntester.pl under the Basicmenu1. 
 Alerts1.
 1 Simple Alert Pop up 
 Test steps:
@@ -62,7 +62,7 @@ Test steps:
 
 Widgets tests
 Here you will find 9 tests to automate where you learn how to interact with different widgets. 
-All of them can be found at http://seleniumui.moderntester.plunder 
+All of them can be found at http://seleniumui.moderntester.pl under 
 
 Widgetsmenu
 1.Accordion 
@@ -116,7 +116,7 @@ Move the slider to such values and after each shift of the slider check if the c
 
 Interactions tests
 Here you can find 5 tests to automate where you can learn how to use Action class in different situations. 
-All of them can befound at http://seleniumui.moderntester.plunder interactionsmenu
+All of them can befound at http://seleniumui.moderntester.pl under interactionsmenu
 
 1. Draggable
 Test steps:
@@ -149,7 +149,7 @@ Test steps:
 
 Other tests
 Here you will find 1 test to show you how to work with JavascriptExecutor class. 
-It can be found at http://seleniumui.moderntester.plunder Othersmenu
+It can be found at http://seleniumui.moderntester.pl under Others menu
 1. High site*
 Test steps:
 1.Scroll page until 'Submit' button is visible
