@@ -12,28 +12,17 @@ public class AccordionTest extends BaseTest {
 
     @Test
     @DisplayName("Accordion test")
-    public void accordionTest() throws InterruptedException {
+    public void accordionTest() {
         driver.get(accordionPage.accordionPageUrl);
         openSectionAndGetText(accordionPage.section1, accordionPage.section1Body);
         openSectionAndGetText(accordionPage.section2, accordionPage.section2Body);
-        openSectionWithMultipleElementsAndGetText
-                (accordionPage.section3,accordionPage.section3Par,accordionPage.section3List);
-        openSectionWithMultipleElementsAndGetText
-                (accordionPage.section4, accordionPage.section4Par1, accordionPage.section4Par2);
+        openSectionAndGetText(accordionPage.section3, accordionPage.section3Body);
+        openSectionAndGetText(accordionPage.section4, accordionPage.section4Body);
     }
 
     private void openSectionAndGetText(String section, String text) {
         driver.findElement(By.cssSelector(section)).click();
-        String expectedText = driver.findElement(By.cssSelector(text)).getText();
-        System.out.println(expectedText + "\n");
-    }
-
-    private void openSectionWithMultipleElementsAndGetText(String section, String element1, String element2)
-            throws InterruptedException{
-        driver.findElement(By.cssSelector(section)).click();
-        String item1 = driver.findElement(By.xpath(element1)).getText();
-        Thread.sleep(1500);
-        String item2 = driver.findElement(By.xpath(element2)).getText();
-        System.out.println(item1 + "\n" + item2 + "\n");
+        String expectedText = driver.findElement(By.cssSelector(text)).getAttribute("textContent");
+        System.out.println(expectedText);
     }
 }
