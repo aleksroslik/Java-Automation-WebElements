@@ -7,10 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -31,7 +27,7 @@ public class TooltipTest extends BaseTest {
         Actions action = new Actions(driver);
         WebElement tooltip = driver.findElement(By.cssSelector(input));
         action.moveToElement(tooltip).perform();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         Boolean display = driver.findElement(By.cssSelector(box)).isDisplayed();
         assertThat(display).isTrue();
         String actualText = driver.findElement(By.cssSelector(box)).getText();
